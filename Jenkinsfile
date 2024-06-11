@@ -1,6 +1,6 @@
 node {
   stage('SCM') {
-    git 'https://github.com/edward-mikuszewski-sonarsource/Demo-java-security.git'
+    checkout scm
   }
   stage('SonarQube Analysis') {
     def mvn = tool 'Default Maven';
